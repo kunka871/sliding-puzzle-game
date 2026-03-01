@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="start-btn">
+        <button>Bắt đầu</button>
+      </div>
+      <div class="game-section">
+        <div class="playing-section">
+          <div class="square-1 bg-green-100 text-green-500">1</div>
+          <div class="square-2 bg-red-100 text-red-500">2</div>
+          <div class="square-3 bg-blue-100 text-blue-500">3</div>
+          <div class="square-4 bg-purple-100 text-purple-500">4</div>
+          <div class="square-5 bg-pink-100 text-pink-500">5</div>
+          <div class="square-6 bg-yellow-100 text-yellow-500">6</div>
+          <div class="square-7 bg-indigo-100 text-indigo-500">7</div>
+          <div class="square-8 bg-gray-100 text-gray-500">8</div>
+          <div class="square-9 bg-emerald-100 text-emerald-500">9</div>
+          <div class="square-10 bg-amber-100 text-amber-500">10</div>
+          <div class="square-11 bg-lime-100 text-lime-500">11</div>
+          <div class="square-12 bg-black text-cyan-500">12</div>
+        </div>
+        <div class="side-info">
+          <div class="timer">
+            <span>Đồng Hồ</span>
+            <time id="time" class="font-mono">00:00</time>
+          </div>
+          <div class="guide">
+            <span>Hướng dẫn di chuyển</span>
+            <div class="arrows">
+              <svg
+                width="160"
+                height="110"
+                viewBox="0 0 160 110"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="55"
+                  y="5"
+                  width="45"
+                  height="45"
+                  rx="10"
+                  fill="#E5E7EB"
+                />
+                <path
+                  d="M77.5 20V35M77.5 20L72.5 25M77.5 20L82.5 25"
+                  stroke="#374151"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <rect
+                  x="5"
+                  y="55"
+                  width="45"
+                  height="45"
+                  rx="10"
+                  fill="#E5E7EB"
+                />
+                <path
+                  d="M15 77.5H30M15 77.5L20 72.5M15 77.5L20 82.5"
+                  stroke="#374151"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <rect
+                  x="55"
+                  y="55"
+                  width="45"
+                  height="45"
+                  rx="10"
+                  fill="#E5E7EB"
+                />
+                <path
+                  d="M77.5 70V85M77.5 85L72.5 80M77.5 85L82.5 80"
+                  stroke="#374151"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <rect
+                  x="105"
+                  y="55"
+                  width="45"
+                  height="45"
+                  rx="10"
+                  fill="#E5E7EB"
+                />
+                <path
+                  d="M115 77.5H130M130 77.5L125 72.5M130 77.5L125 82.5"
+                  stroke="#374151"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="wasd">
+              <svg
+                width="160"
+                height="110"
+                viewBox="0 0 160 110"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="55"
+                  y="5"
+                  width="45"
+                  height="45"
+                  rx="10"
+                  fill="#E5E7EB"
+                />
+                <text
+                  x="77.5"
+                  y="32"
+                  text-anchor="middle"
+                  fill="#1F2937"
+                  font-family="Arial, sans-serif"
+                  font-weight="bold"
+                  font-size="20"
+                >
+                  W
+                </text>
+
+                <rect
+                  x="5"
+                  y="55"
+                  width="45"
+                  height="45"
+                  rx="10"
+                  fill="#E5E7EB"
+                />
+                <text
+                  x="27.5"
+                  y="82"
+                  text-anchor="middle"
+                  fill="#1F2937"
+                  font-family="Arial, sans-serif"
+                  font-weight="bold"
+                  font-size="20"
+                >
+                  A
+                </text>
+
+                <rect
+                  x="55"
+                  y="55"
+                  width="45"
+                  height="45"
+                  rx="10"
+                  fill="#E5E7EB"
+                />
+                <text
+                  x="77.5"
+                  y="82"
+                  text-anchor="middle"
+                  fill="#1F2937"
+                  font-family="Arial, sans-serif"
+                  font-weight="bold"
+                  font-size="20"
+                >
+                  S
+                </text>
+
+                <rect
+                  x="105"
+                  y="55"
+                  width="45"
+                  height="45"
+                  rx="10"
+                  fill="#E5E7EB"
+                />
+                <text
+                  x="127.5"
+                  y="82"
+                  text-anchor="middle"
+                  fill="#1F2937"
+                  font-family="Arial, sans-serif"
+                  font-weight="bold"
+                  font-size="20"
+                >
+                  D
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="history">
+        <span>Lịch Sử Lượt Chơi</span>
+        <table>
+          <thead>
+            <tr>
+              <th class="col-index">#</th>
+              <th class="col-move">Bước đi</th>
+              <th class="col-time">Thời Gian</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

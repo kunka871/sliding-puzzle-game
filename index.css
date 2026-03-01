@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+}
+.game-section {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.playing-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 20px;
+  flex: 1;
+}
+
+.start-btn button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.start-btn button:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+.start-btn {
+  display: flex;
+  justify-content: center;
+}
+.playing-section div {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.side-info {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.timer,
+.guide {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.timer span,
+.guide span {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+#time {
+  font-size: 40px;
+  font-weight: 900;
+}
+.arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wasd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.history {
+  margin-top: 40px;
+  border-top: 2px solid #eee;
+  padding-top: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+thead {
+  background-color: #f2f2f2;
+}
